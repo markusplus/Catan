@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_total"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#297E8E"
+    tools:context=".MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <LinearLayout
+        android:id="@+id/fila1"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        tools:ignore="MissingConstraints,UnknownId">
+
+        <LinearLayout
+            android:id="@+id/layout_dado"
+            android:layout_width="238dp"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:gravity="center"
+            android:onClick="TirarDado">
+
+            <ImageView
+                android:id="@+id/dado_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/dado1" />
+
+            <ImageView
+                android:id="@+id/dado_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/dado1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/carta_recursos_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/magia_icon"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:alpha="0.5"
+                android:src="@drawable/reverso" />
+
+            <TextView
+                android:id="@+id/magia_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"
+                android:visibility="gone"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/carretera_necesario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fila3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fila1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/tronco"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/ladrillo"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/poblado_necesario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fila3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fila1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/tronco"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/ladrillo"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/oveja"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/trigo"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ciudad_necesario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fila3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fila1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="2"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/trigo"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="3"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/roca"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/magia_necesario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fila3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fila1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/oveja"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/trigo"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/roca"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textSize="22dp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fila3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fila1"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/carretera_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/carretera_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:id="@+id/carretera_icon"
+                android:layout_width="70dp"
+                android:layout_height="77dp"
+                android:alpha="0.5"
+                android:src="@drawable/puente"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pueblo_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:id="@+id/pueblo_icon"
+                android:layout_width="70dp"
+                android:layout_height="77dp"
+                android:alpha="0.5"
+                android:src="@drawable/choza"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ciudad_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:id="@+id/ciudad_icon"
+                android:layout_width="70dp"
+                android:layout_height="77dp"
+                android:alpha="0.5"
+                android:src="@drawable/castillo"></ImageView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/fila3"
+        tools:ignore="MissingConstraints"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fila4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/contenedor_total"
+        tools:ignore="UnknownId">
+
+        <LinearLayout
+            android:id="@+id/tronco_container_fila4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tronco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/tronco"></ImageView>
+
+            <ImageView
+                android:id="@+id/menos_tronco"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flecha_abajo"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ladrillo_container_fila4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ladrillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/ladrillo"></ImageView>
+
+            <ImageView
+                android:id="@+id/menos_ladrillo"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flecha_abajo"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oveja_container_fila4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/oveja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/oveja"></ImageView>
+
+            <ImageView
+                android:id="@+id/menos_oveja"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flecha_abajo"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trigo_container_fiila4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/trigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/trigo"></ImageView>
+
+            <ImageView
+                android:id="@+id/menos_trigo"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flecha_abajo"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/roca_container_fila4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/roca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="0"
+                android:textSize="22dp"></TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="77dp"
+                android:src="@drawable/roca"></ImageView>
+
+            <ImageView
+                android:id="@+id/menos_roca"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/flecha_abajo"></ImageView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
